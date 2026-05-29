@@ -2,14 +2,13 @@ import os
 import re
 import json
 import random
-from dotenv import load_dotenv
+import streamlit as st
 from json_repair import repair_json
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 
-load_dotenv()
-key = os.getenv("GROQ_API_KEY")
+key = st.secrets["GROQ_API_KEY"]
 translation_model = ChatGroq(model="llama-3.1-8b-instant",groq_api_key=key)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

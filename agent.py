@@ -1,6 +1,6 @@
 import os
 import asyncio
-from dotenv import load_dotenv
+import streamlit as st
 from typing import TypedDict, Annotated, Optional, Any
 from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, START
@@ -11,8 +11,7 @@ from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage,AIMe
 from tools import (get_n_random_words, get_n_random_words_by_difficulty_level,
 translate_words,generate_examples_and_text)
 
-load_dotenv()
-key = os.getenv("GROQ_API_KEY")
+key = st.secrets["GROQ_API_KEY"]
 local_tools = [get_n_random_words, get_n_random_words_by_difficulty_level, translate_words,
                generate_examples_and_text]
 

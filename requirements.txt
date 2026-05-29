@@ -4,7 +4,6 @@ langchain
 langgraph
 langchain-core
 langchain-groq
-python-dotenv
 json-repair
 pydantic
 typing-extensions
