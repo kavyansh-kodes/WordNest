@@ -1,0 +1,10 @@
+# Python packages used in making :-
+streamlit
+langchain
+langgraph
+langchain-core
+langchain-groq
+python-dotenv
+json-repair
+pydantic
+typing-extensions
